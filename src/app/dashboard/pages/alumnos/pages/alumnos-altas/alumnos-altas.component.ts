@@ -36,8 +36,7 @@ export class AlumnosAltasComponent {
 
   onSubmit(): void {
     if (this.alumnosForm.valid) {
-      console.log("Valido");
-      const newAlumno = {
+        const newAlumno = {
         ...this.data,
         id: this.data ? this.data.id : undefined,
         firstName: this.nombreControl.value,

@@ -1,4 +1,5 @@
-<h2 class="title-detalle" mat-dialog-title>Detalles del alumno: <b>{{ alumno?.firstName }} {{ alumno?.lastName }}</b></h2>
+<h2 class="title-detalle" mat-dialog-title><button mat-icon-button  matTooltip="Regresar a pantalla de alumnos" routerLink="/dashboard/alumnos" ><mat-icon>keyboard_return</mat-icon></button> 
+    Detalles del alumno: <b>{{ alumno?.firstName }} {{ alumno?.lastName }}</b></h2>
   <div class="form-container position-absolute top-50 start-50 translate-middle ">
       <form>
         <div class="container">

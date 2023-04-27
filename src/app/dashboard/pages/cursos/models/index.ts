@@ -1,1 +1,1 @@
-export * from './cursos.model';
+export * from './curso.model';

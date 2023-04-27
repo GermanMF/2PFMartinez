@@ -46,7 +46,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
     {
       id: 3,
       route: 'inscripciones',
-      name: 'Lista de Inscripcions',
+      name: 'Lista de Inscripciones',
     },
   ];
 
