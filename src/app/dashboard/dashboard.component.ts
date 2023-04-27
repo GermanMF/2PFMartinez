@@ -4,7 +4,6 @@ import { Observable, Subject } from 'rxjs';
 import { AuthService } from '../core/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Alumno } from './pages/alumnos/models';
-import { AlumnosService } from './pages/alumnos/services/alumnos.service';
 import { Router } from '@angular/router';
 
 export interface linkProperty {
@@ -54,7 +53,6 @@ export class DashboardComponent implements OnDestroy, OnInit {
   constructor(
     private authService: AuthService,
     private _snackBar: MatSnackBar,
-    private alumnosService: AlumnosService,
     private router: Router
   ) {
     this.authForm = new FormGroup({
@@ -69,14 +67,14 @@ export class DashboardComponent implements OnDestroy, OnInit {
   
 
   openSnackBar(alumnoAutenticado: string) {
-    this._snackBar.open(alumnoAutenticado, '', { duration: this.durationInSeconds * 100000});
+    this._snackBar.open(alumnoAutenticado, '', { duration: this.durationInSeconds * 1000});
   }
 
   onSubmit(): void {
     if (this.authForm.valid) {
       this.authService.enviarAdrawer(this.nombreAuthControl.value!);
       this.openSnackBar(
-        `El alumno: ${this.nombreAuthControl.value!} se logueó`
+        `El alumno 👩‍🔬: ${this.nombreAuthControl.value!} se logueó`
       );
     } else {
       this.openSnackBar('Error al loguear alumno');

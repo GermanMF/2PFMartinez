@@ -1,24 +1,28 @@
 .sidenav-container {
-    height: 100vh;
-  }
-  
-  .sidenav-content {
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .toolbar-height {
-    height: 100px;
-  }
-  
-  .sidenav-size {
-    padding: 50px;
-  }
-  
-  .toolbar-spacer {
-    flex: 1 1 auto;
-  }
+  height: 100vh;
+}
 
-  .margin-login{
-    margin-right: 10px;
-  }
+.mat-drawer-container{
+  background-color: #fff;
+}
+
+.sidenav-content {
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar-height {
+  height: 100px;
+}
+
+.sidenav-size {
+  padding: 50px;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.margin-login {
+  margin-right: 10px;
+}
