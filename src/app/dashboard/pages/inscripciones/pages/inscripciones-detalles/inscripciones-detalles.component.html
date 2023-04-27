@@ -6,7 +6,7 @@
   >
     <mat-icon>keyboard_return</mat-icon>
   </button>
-  Detalles de la inscripción: Materia - <b>{{ inscripcion?.materia }}, Grupo - {{ inscripcion?.grupo }}</b>
+  Detalles de la inscripción: Materia - <b>{{ inscripcion?.materia }}</b>, Grupo - <b> {{ inscripcion?.grupo }}</b>
 </h2>
 <div class="form-container">
   <form>
@@ -20,7 +20,7 @@
         </div>
         <div class="col">
           <mat-form-field appearance="outline">
-            <mat-label> Tutor </mat-label>
+            <mat-label> Grupo </mat-label>
             <input matInput disabled value="{{ inscripcion?.grupo }}" />
           </mat-form-field>
         </div>
