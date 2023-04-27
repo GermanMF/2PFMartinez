@@ -18,11 +18,11 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ReactiveFormsModule,
     RouterModule.forChild([{
-      path: 'cursos',
+      path: '',
       component: CursosComponent,
     },
     {
-      path: 'cursos/:id',
+      path: ':id',
       component: CursosDetallesComponent,
     }
     ])

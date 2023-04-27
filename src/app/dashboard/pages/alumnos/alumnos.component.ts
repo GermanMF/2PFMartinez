@@ -6,6 +6,7 @@ import { AlumnosService } from './services/alumnos.service';
 import { AlumnosAltasComponent } from './pages/alumnos-altas/alumnos-altas.component';
 import { DeleteDialogComponent } from './pages/delete-dialog/delete-dialog.component';
 import { AlumnosEditarComponent } from './pages/alumnos-editar/alumnos-editar.component';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-alumnos',
@@ -22,7 +23,9 @@ export class AlumnosComponent {
   }
 
   constructor(private matDialog: MatDialog,
-    private alumnosService: AlumnosService) {
+    private alumnosService: AlumnosService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,) {
     this.alumnosService.getAlumnos().subscribe(alumnos => {
       this.dataSource.data = alumnos;
     })
@@ -79,6 +82,12 @@ export class AlumnosComponent {
     });
     this.dataSource.data[index] = alumno;
     this.dataSource = new MatTableDataSource(this.dataSource.data);
+  }
+
+  details(alumnoId: number): void {
+    this.router.navigate([alumnoId], {
+      relativeTo: this.activatedRoute,
+    });
   }
 
   displayedColumns: string[] = [

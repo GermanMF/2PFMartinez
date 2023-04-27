@@ -18,12 +18,12 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ReactiveFormsModule,
     RouterModule.forChild([{
-      path: 'inscripciones',
+      path: '',
       component: InscripcionesComponent,
 
     },
     {
-      path: 'inscripciones/:id',
+      path: ':id',
       component: InscripcionesDetallesComponent,
     }
     ])

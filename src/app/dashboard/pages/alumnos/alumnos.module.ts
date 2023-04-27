@@ -25,6 +25,7 @@ import { DeleteDialogComponent } from './pages/delete-dialog/delete-dialog.compo
     AlumnosAltasComponent,
     AlumnosComponent,
     AlumnosEditarComponent,
+    AlumnosDetallesComponent,
     DeleteDialogComponent
   ],
   imports: [
@@ -42,11 +43,11 @@ import { DeleteDialogComponent } from './pages/delete-dialog/delete-dialog.compo
     SharedModule,
     RouterModule.forChild([
       {
-        path: 'alumnos',
+        path: '',
         component: AlumnosComponent,
       },
       {
-        path: 'alumnos/:id',
+        path: ':id',
         component: AlumnosDetallesComponent,
       }
     ])
